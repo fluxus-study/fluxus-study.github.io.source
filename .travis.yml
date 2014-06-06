@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- '0.10'
+branches:
+  only:
+  - master
+env:
+  global:
+  - GIT_COMMITTER_NAME=fluxus-study
+  - GIT_AUTHOR_NAME=Fluxus
+  - secure: hryn7ihs8YrUKGZt9n/9Q8IKt+eBlds980tuKaTtTt50n4UnMSvbWUtGm2rAX7vq9+7nV9OvQxkN7JHiWrqba4hkqJL4F0RKdP0ZOghXeu9Sv6LrNCW81YSk2IHpD5lu2I7SUhsgTy9a35G6pMqpOmQcouyk5c2GC2TXecUVXj4=
+before_script:
+- npm install -g bower
+- npm install -g docpad
+- npm install
+- bower install
+- git remote add target https://$GH_TOKEN@github.com/fluxus-study/fluxus-study.github.io.git
+script: docpad deploy-ghpages --env static
