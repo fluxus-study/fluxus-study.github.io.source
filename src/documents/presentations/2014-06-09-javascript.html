@@ -64,24 +64,234 @@ http.createServer(function(request, response) {
   </code></pre>
 </section>
 
+<section>  <!-- 자바스크립트 섹션 시작 -->
+
 <section>
   <h2>Javascript</h2>
+  나는 자바스크립트에 대해 얼마나 알고 있는가?
+</section>
+
+<section>
   자바스크립트에서는 전부 다 객체. 함수도 객체.
+<pre><code data-trim contenteditable>
+function getAdd(a, b){
+  return a+b;
+}
+
+var addVal = getAdd(1,2);
+console.log(addVal);
+</code></pre>
 <pre><code data-trim contenteditable>
 var getAdd = function(a, b){
   return a+b;
 }
-</code></pre>
 
-이런 식으로 함수를 객체로 만들어서 인자로 던지는것도 가능.
+var addVal = getAdd(1,2);
+console.log(addVal);
+</code></pre>
+  이런 식으로 함수를 객체로 만들어서 인자로 던지는것도 가능.
 </section>
+
+<section>
+  <h2>javascript 자료형</h2>
+  <p>
+    선언은 전부 var
+  </p>
+  <ol>
+    <li>number (숫자)	→ var test2 = 100 ;</li>
+    <li>string  (문자열)	→ var test3 = “hahaha” ;</li>
+    <li>boolean		→ var test4 = true ;</li>
+    <li>object (객체)	→ var test6 = { };</li>
+    <li>function (함수)	→ var test5 = function(){ }; //(람다함수)</li>
+    <li>undefined 		→ var test1 ; 값을 명시하지 않은 / 존재하지 않는 변수. null 이랑은 다름.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>비교문</h2>
+  <p>
+    == / !=
+  </p>
+  <p>
+    === / !==
+  </p>
+<pre><code data-trim contenteditable>
+var a = 100;
+var b = '100';
+console.log("a == b : " + (a == b));
+console.log("a === b : " + (a === b));
+</code></pre>
+</section>
+
+<section>
+  <h2>리터럴 함수 : new 함수()</h2>
+  <p>
+    new Number(), new String(), new Boolean();
+  </p>
+  <p>형식 가져오는 기능 : typeof()</p>
+<pre><code data-trim contenteditable>
+var a = true;
+var b = new Boolean(true);
+
+console.log("a : " + typeof(a));
+console.log("b : " + typeof(b));
+
+console.log("a == b : " + (a == b));
+console.log("a === b : " + (a === b));
+</code></pre>
+</section>
+
+<section>
+  <h2>JS 객체형</h2>
+  <ol>
+    <li>Object()</li>
+    <li>Array()</li>
+    <li>Function()</li>
+    <li>Date()</li>
+    <li>Math.PI</li>
+  </ol>
+<pre><code data-trim contenteditable>
+var obj = {key:val, key:val};
+var arr = [val, val, val];
+var func = function(){};
+var date = new Date();
+</code></pre>
+  <p>
+    Math 는 JS가 자체적으로 제공하는 오브젝트 같은거. 이런식으로 라이브러리 사용할 때 마다 제공하는 기능들이 생김.
+  </p>
+  <p>
+    예) 센차 터치의 : Ext 등.
+    <a target="_new" href="http://efreen.kimjmin.net/">http://efreen.kimjmin.net/</a>
+  </p>
+</section>
+
+<section>
+  <h2>Object - 객체형.</h2>
+<pre><code data-trim contenteditable>
+var me = {
+  name : 'Jongmin',
+  age : 34,
+  game : ['PS3', 'XBox360'],
+  wife : {name : 'Areum', age : 28},
+  married : true,
+  getName : function(){return "My name is "+this.name}
+};
+
+console.log(me.name);
+console.log(me['age']);
+console.log(me.game[0]);
+console.log(me.wife);
+console.log(me.getName());
+</code></pre>
+</section>
+
+<section>
+  <h2>Object - 객체형.</h2>
+<pre><code data-trim contenteditable>
+var me = {
+  name : 'Jongmin'
+};
+me.age = 34;
+me['job'] = 'programmer';
+
+console.log(me.age);
+console.log(me.job);
+</code></pre>
+</section>
+
+<section>
+  <h2>Array - 배열형.</h2>
+<pre><code data-trim contenteditable>
+var arrs = ['name',100,{name : 'kim'}];
+console.log(arrs[0]);
+console.log(arrs[2].name);
+</code></pre>
+  <p>
+    배열 내부 값은 아무 형이나 올 수 있음.
+  </p>
+</section>
+
+<section>
+  <h2>Array - 배열형.</h2>
+<pre><code data-trim contenteditable>
+var arrA = new Array(10);
+var arrB = new Array(1,2,3);
+
+console.log(arrA.length, arrA[0]);
+console.log(arrB.length, arrB[0]);
+</code></pre>
+  <p>
+    아무 형이나 올 수 있음.
+  </p>
+</section>
+
+<section>
+  <h2>Function - 함수형.</h2>
+  <p>
+    함수 선언하는 3가지 방법.
+  </p>
+<pre><code data-trim contenteditable>
+function addA(a, b){
+  return a+b;
+}
+
+var addB = function(a, b){
+  return a+b;
+}
+
+var addC = new Function('a','b','return a+b');
+
+console.log(addA(1,2), addB(2,3), addC(3,4));
+</code></pre>
+</section>
+
+<section>
+  <h2>Function - 함수형.</h2>
+  <p>
+    arguments - 인자 배열.
+  </p>
+<pre><code data-trim contenteditable>
+function add(){
+  return arguments[0] + arguments[1];
+}
+
+console.log(add(2,3));
+</code></pre>
+<p>
+  arguments.length : 실제 넘겨준 인자 갯수.
+</p>
+<pre><code data-trim contenteditable>
+function args(a,b){
+  return arguments.length;
+}
+
+console.log(args());
+console.log(args('a','b','c','d'));
+</code></pre>
+</section>
+
+</section> <!-- 자바스크립트 섹션 끝 -->
+
+<section>
+  <section>
+    <h2>목표</h2>
+    <p>
+      재능 연결 서비스.
+    </p>
+    <p>
+      오투잡 : <a target="_new" href="http://otwojob.com/">http://otwojob.com/</a>
+    </p>
+  </section>
 
 <section>
   <h2>다음주 과제</h2>
   <ol>
     <li>클라우드 서버 생성.</li>
-    <li>Node.JS 설치.</li>
-    <li><a href='http://www.nodebeginner.org/index-kr.html'>http://www.nodebeginner.org/index-kr.html</a> 따라하기.</li>
-    <li>자기가 실습한 내용 fluxus-study.github.io 에 올리기.</li>
+    <li>NodeJS 설치.</li>
+    <li><a target="_new" href='http://www.nodebeginner.org/index-kr.html'>http://www.nodebeginner.org/index-kr.html</a> 따라하기.</li>
+    <li>스터디 내용 <a target="_new" href="https://github.com/fluxus-study/documents">https://github.com/fluxus-study/documents</a> 마크다운으로 올리기.</li>
+    <li>발표자료 만들어 fluxus-study.github.io 에 올리기. -> <a target="_new" href="https://github.com/fluxus-study/fluxus-study.github.io.source">참고</a> </li>
   </ol>
+</section>
+
 </section>
