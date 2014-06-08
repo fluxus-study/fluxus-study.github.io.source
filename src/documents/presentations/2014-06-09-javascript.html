@@ -1,0 +1,87 @@
+---
+title: Intro.
+description: 첫 모임용.
+date: 2014-06-09
+author: 김종민
+layout: presentation
+theme: default
+transition: default
+---
+
+<section>
+  <h1>Intro</h1>
+  <h3>MEAN Stack을 파보자!</h3>
+  <p>
+    <small>Created by <a href="http://kimjmin.net">김종민</a> / <a href="http://twitter.com/kimjmin">@kimjmin</a></small>
+  </p>
+</section>
+
+<section>
+  <h2>MEANStack?</h2>
+  <div style="background:#eee">
+    <img width="170" src="http://mean.io/img/logos/mongodb.png"/>
+    <img width="170" src="http://mean.io/img/logos/express.png"/>
+    <img width="170" src="http://mean.io/img/logos/angularjs.png"/>
+    <img width="170" src="http://mean.io/img/logos/nodejs.png"/>
+  </div>
+  <ul>
+    <li>MEANStack 홈페이지 : <a target="_new" href="http://mean.io">http://mean.io</a></li>
+    <li>허광남님 강좌 : <a target="_new" href="http://youtu.be/imO5S9fbQXk">http://youtu.be/imO5S9fbQXk</a></li>
+    <li>윤영식님 블로그 : <a target="_new" href="http://mobicon.tistory.com/335">http://mobicon.tistory.com/335</a></li>
+  </ul>
+</section>
+
+<section>
+  <h3>현재 국내 SI들</h3>
+  <p>Java, JSP, Oracle, Weblogic, Spring, Ant, Maven, Hudson(Jenkins)</p>
+  <p>사용 언어 : Java, HTML, Javascript, SQL...</p>
+  <br/>
+  <h3>MEAN Stack</h3>
+  <p>NodeJS, MongoDB, AngularJS, Yoman, grunt...</p>
+  <p>사용 언어 : Javacript, JSON</p>
+</section>
+
+<section>
+  <h3>MEANStack 사용중인 서비스.</h3>
+  <img src="http://cfile10.uf.tistory.com/image/2121E24E528FFAA311FE37"/>
+</section>
+
+<section>
+  <h3>자바스크립트 기술</h3>
+  <img width="720" src="/presentations/img/javascript_pack.png">
+</section>
+
+<section>
+  <h2>NodeJS</h2>
+  <pre><code data-trim contenteditable>
+var http = require("http");
+
+http.createServer(function(request, response) {
+  response.writeHead(200, {"Content-Type": "text/plain"});
+  response.write("Hello World");
+  response.end();
+}).listen(8888);
+  </code></pre>
+</section>
+
+<section>
+  <h2>Javascript</h2>
+  자바스크립트에서는 전부 다 객체. 함수도 객체.
+<pre><code data-trim contenteditable>
+var getAdd = function(a, b){
+  return a+b;
+}
+</code></pre>
+
+이런 식으로 함수를 객체로 만들어서 인자로 던지는것도 가능.
+</section>
+
+<section>
+  <h2>다음주 과제</h2>
+  <ol>
+    <li>클라우드 서버 생성.</li>
+    <li>Node.JS 설치.</li>
+    <li><a href='http://www.nodebeginner.org/index-kr.html'>http://www.nodebeginner.org/index-kr.html</a> 따라하기.</li>
+    <li>자기가 실습한 내용 fluxus-study.github.io 에 올리기.</li>
+  </ol>
+</section>
