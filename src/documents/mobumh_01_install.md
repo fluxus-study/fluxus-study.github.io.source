@@ -37,4 +37,4 @@
 - vi ~/.bash_profile
  - 행추가 PATH=$PATH:/home/dev/local/mongodb-linux-x86_64-2.4.9/bin
 - mongod --dbpath=/home/dev/data/db
-- grunt에서 오류남ㅠㅠ
+- grunt에서 오류. 접속불가능으로 보임.
